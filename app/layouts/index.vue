@@ -17,7 +17,7 @@
         </el-menu>
       </el-header>
       <router-view></router-view>
-      <el-footer class="fox">白给公司</el-footer>
+      <el-footer class="fox"><h1>白给公司</h1></el-footer>
     </el-container>
   </div>
 </template>
@@ -29,6 +29,7 @@ export default {
   },
   methods: {
     selectHan(v) {
+      console.log(v);
       this.$router.push({
         name: v
       });

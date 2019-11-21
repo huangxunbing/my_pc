@@ -2,24 +2,14 @@
   <div class="side_box">
       <div class="side">
         <el-menu
-          default-active="1"
+          :default-active="B"
           class="el-menu-vertical-demo"
         >
-          <el-menu-item index="1">
+           <el-menu-item v-for="item in nowconmens" :key="item.v" :index="item.k" >
             <i class="el-icon-menu"></i>
-            <span slot="title">导航二</span>
-          </el-menu-item>
-           <el-menu-item index="2">
-            <i class="el-icon-menu"></i>
-            <span slot="title">导航二</span>
-          </el-menu-item>
-           <el-menu-item index="3">
-            <i class="el-icon-menu"></i>
-            <span slot="title">导航二</span>
-          </el-menu-item>
-           <el-menu-item index="4">
-            <i class="el-icon-menu"></i>
-            <span slot="title">导航二</span>
+            <span slot="title">{{item.v}}</span>
+            <span>{{item.A}}</span>
+            <span>{{item.B}}</span>
           </el-menu-item>
         </el-menu>
     </div>
@@ -52,9 +42,18 @@ export default {
     this.A = this.$route.meta.A;
     this.B = this.$route.meta.B;
   },
+  updated(){
+    this.A = this.$route.meta.A;
+    this.B = this.$route.meta.B;
+  },
   computed:{
     nowconmens(){
       return this.conmens[this.A]
+    }
+  },
+  methods:{
+    haha(){
+      console.log(this.conmens[this.A])
     }
   }
 };

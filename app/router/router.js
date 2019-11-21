@@ -62,7 +62,7 @@ const router = new VueRouter({
                     name: 'caiwu',
                     component: () => import('../layouts/side.vue'),
                     redirect: {
-                        name: 'pingzheng'
+                        name: 'zxgl'
                     },
                     children: [
                         {
