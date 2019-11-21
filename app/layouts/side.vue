@@ -56,7 +56,7 @@ export default {
     nowconmens(){
       return this.conmens[this.A]
     }
-  }  
+  }
 };
 </script>
 
